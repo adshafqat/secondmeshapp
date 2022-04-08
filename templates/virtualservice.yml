@@ -4,7 +4,7 @@ metadata:
   name: secondmeshapp
 spec:
   hosts:
-    - '*'
+    - secondmeshapp.apps.cluster-z9nwc.z9nwc.sandbox439.opentlc.com
   gateways:
     - mesh-gateway
   http:
