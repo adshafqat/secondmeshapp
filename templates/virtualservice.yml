@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: secondmeshapp
+spec:
+  hosts:
+    - '*'
+  gateways:
+    - mesh-gateway
+  http:
+    - match:
+        - uri:
+            exact: /secondmeshapp
+        - uri:
+            exact: /bla
+      route:
+        - destination:
+            host: secondmeshapp
+            port:
+              number: 9090
